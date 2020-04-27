@@ -21,6 +21,7 @@ html,body {
 }
 .navbar {
     margin-bottom: 0px;
+    border-radius: 0px;
 }
 li { 
 	list-style-type: none;
