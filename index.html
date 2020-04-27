@@ -758,9 +758,9 @@
 			<div class="footer_box">
 				<div class="footer_title">Features</div> 
 				<div class="footer_body">
-					<li><a href="#section_Skills">Services</a></li>
+					<li><a href="#section_About">About</a></li>
+					<li><a href="#Section_Skills">Skills</a></li>
 					<li><a href="#section_Portfolio">Portfolio</a></li>
-					<li><a href="#Section_Pricing">Pricing</a></li>
 					<li><a href="#section_Contact">Contact</a></li>
 				</div>
 			</div>
@@ -787,7 +787,7 @@
 			<span style="color: var(--text_highlight);font-weight: lighter;font-size: 15px">
 				<i class="far fa-copyright"></i>
 			</span> 
-			Rouzaz Aamir Hashmi 2020
+			Rouzaz Aamir Hashmi, <span id="current-year"> </span>
 			<div>
 				<a style="color:lightgray;font-size: 13px;text-decoration: none;" href="http://www.freepik.com">Background Image vector Designed by rawpixel.com / Freepik</a>
 			</div>
@@ -796,5 +796,9 @@
 
 	<!-- jQuery Code -->
 	<script src="basic.js"></script>
+	<script type="text/javascript">
+		var currentYear = document.getElementById('current-year');
+		currentYear.innerText = new Date().getFullYear();
+	</script>
 </body>
 </html>
