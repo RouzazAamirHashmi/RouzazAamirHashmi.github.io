@@ -3,8 +3,8 @@
     --div_highlight: #45A29E;
     --contrast: #222;
     --light: #EAEAEA;
-    --title_font: 'Candal', sans-serif;
-    --body_font: 'Gotu', sans-serif;
+    --title_font: 'Open Sans Condensed', sans-serif;
+    --body_font: 'Raleway', sans-serif;
 }
 html,body {
     position: relative; 
