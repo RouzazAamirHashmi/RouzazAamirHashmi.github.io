@@ -456,15 +456,14 @@ li {
     position: relative;
     width: 200px;
     height: 200px;
-    text-align: center;
     line-height: 200px;
     font-size: 30px;
-    text-align: center;
 }
 .box canvas {
     position: absolute;
     top: 0;
     left: 0;
+    width: 200px;
 }
 .owl-item {
     text-align: center;
