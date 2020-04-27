@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Portfolio</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- jQuery Link -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<!-- Bootstrap Links -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<!-- Owl Carousel Plugin Links -->
+	<link rel='stylesheet'href='https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css'>
+	<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css'>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js'></script>
+	<!-- Progress Bar Link -->
+	<script src="images/jquery.easypiechart.js"></script>
+	<!-- Font Awesome Link -->
+	<script src="https://kit.fontawesome.com/11b8901115.js"></script>
+	<!-- CSS Links -->
+	<link rel="stylesheet" type="text/css" href="index.css">
+	<!-- Font Type Link -->
+	<link href="https://fonts.googleapis.com/css2?family=Candal&family=Gotu&display=swap" rel="stylesheet">
+	<script>
+		$(document).ready(function() {
+			// ================================================================================================= SMOOTH SCROLLING
+			$("a").on('click', function(event) {
+				if (this.hash !== "") {
+					event.preventDefault();
+					var hash = this.hash;
+					$('html, body').animate({
+						scrollTop: $(hash).offset().top
+					}, 800, function(){
+						window.location.hash = hash;
+					});
+				}
+			});
+
+			// =================================================================================================  FIXED NAVBAR
+			$(document).scroll(function() {    
+				var current_scrolled_lenght = $(document).scrollTop();
+				var section_Home_Height = $('#section_Home').outerHeight();
+
+				if (current_scrolled_lenght >= section_Home_Height) {
+					$(".navbar").addClass("fixed_navbar");
+				} else {
+					$(".navbar").removeClass("fixed_navbar");
+				}   
+			});
+
+			// =================================================================================================  COLAPSE NAVBAR
+			$('a').click(function() {
+				$("#myNavbar").collapse('hide');
+			});
+
+			// =================================================================================================  SCROLL TO NAVBAR
+			$(".navbar-toggle").click(function (){
+				$('html, body').animate({
+					scrollTop: $(".navbar").offset().top
+				}, 800);
+			});
+
+			// =================================================================================================  PORTFOLIO TRANSITION 
+			$('.all_btn').addClass('active_btn');
+			$(".gallery_buttons button").focus(function(){
+				$(".gallery_buttons button").removeClass('active_btn');
+				$(this).addClass('active_btn');
+			});
+
+			setTimeout(function(){
+				$('.gallery_img:has(img[alt="Flutter"])').removeClass('add_img');
+				$('.gallery_img:has(img[alt="Firebase"])').removeClass('add_img');
+				$('.gallery_img:has(img[alt="Android"])').removeClass('add_img');
+				$('.gallery_img:has(img[alt="Bootstrap"])').removeClass('add_img');
+				$('.gallery_img:has(img[alt="JQuery"])').removeClass('add_img');
+				},0,
+				setTimeout(function(){
+					$('.gallery_img:has(img[alt="Flutter"])').hide();
+					$('.gallery_img:has(img[alt="Firebase"])').hide();
+					$('.gallery_img:has(img[alt="Android"])').hide();
+					$('.gallery_img:has(img[alt="Bootstrap"])').hide();
+					$('.gallery_img:has(img[alt="JQuery"])').hide();
+				},500,
+				setTimeout(function(){
+					$('.gallery_img').show().addClass('add_img');
+			},550)));
+
+			$(".all_btn").click(function(){
+				setTimeout(function(){
+					$('.gallery_img:has(img[alt="Flutter"])').removeClass('add_img');
+					$('.gallery_img:has(img[alt="Firebase"])').removeClass('add_img');
+					$('.gallery_img:has(img[alt="Android"])').removeClass('add_img');
+					$('.gallery_img:has(img[alt="Bootstrap"])').removeClass('add_img');
+					$('.gallery_img:has(img[alt="JQuery"])').removeClass('add_img');
+				},0,
+				setTimeout(function(){
+					$('.gallery_img:has(img[alt="Flutter"])').hide();
+					$('.gallery_img:has(img[alt="Firebase"])').hide();
+					$('.gallery_img:has(img[alt="Android"])').hide();
+					$('.gallery_img:has(img[alt="Bootstrap"])').hide();
+					$('.gallery_img:has(img[alt="JQuery"])').hide();
+				},500,
+				setTimeout(function(){
+					$('.gallery_img').show().addClass('add_img');
+				},550)));
+			});
+
+			$(".Flutter_btn").click(function(){
+			  	setTimeout(function(){
+					$('.gallery_img:has(img[alt="Flutter"])').removeClass('add_img');
+					$('.gallery_img:has(img[alt="Firebase"])').removeClass('add_img');
+					$('.gallery_img:has(img[alt="Android"])').removeClass('add_img');
+					$('.gallery_img:has(img[alt="Bootstrap"])').removeClass('add_img');
+					$('.gallery_img:has(img[alt="JQuery"])').removeClass('add_img');
+				},0,
+				setTimeout(function(){
+					$('.gallery_img:has(img[alt="Firebase"])').hide();
+					$('.gallery_img:has(img[alt="Android"])').hide();
+					$('.gallery_img:has(img[alt="Bootstrap"])').hide();
+					$('.gallery_img:has(img[alt="JQuery"])').hide();
+				},500,
+				setTimeout(function(){
+					$('.gallery_img:has(img[alt="Flutter"])').show().addClass('add_img');
+				},450)));
+			});
+
+			$(".Firebase_btn").click(function(){
+			  	setTimeout(function(){
+					$('.gallery_img:has(img[alt="Flutter"])').removeClass('add_img');
+					$('.gallery_img:has(img[alt="Firebase"])').removeClass('add_img');
+					$('.gallery_img:has(img[alt="Android"])').removeClass('add_img');
+					$('.gallery_img:has(img[alt="Bootstrap"])').removeClass('add_img');
+					$('.gallery_img:has(img[alt="JQuery"])').removeClass('add_img');
+				},0,
+				setTimeout(function(){
+					$('.gallery_img:has(img[alt="Flutter"])').hide();
+					$('.gallery_img:has(img[alt="Android"])').hide();
+					$('.gallery_img:has(img[alt="Bootstrap"])').hide();
+					$('.gallery_img:has(img[alt="JQuery"])').hide();
+				},500,
+				setTimeout(function(){
+					$('.gallery_img:has(img[alt="Firebase"])').show().addClass('add_img');
+				},450)));
+			});
+
+			$(".Android_btn").click(function(){
+			  	setTimeout(function(){
+					$('.gallery_img:has(img[alt="Flutter"])').removeClass('add_img');
+					$('.gallery_img:has(img[alt="Firebase"])').removeClass('add_img');
+					$('.gallery_img:has(img[alt="Android"])').removeClass('add_img');
+					$('.gallery_img:has(img[alt="Bootstrap"])').removeClass('add_img');
+					$('.gallery_img:has(img[alt="JQuery"])').removeClass('add_img');
+				},0,
+				setTimeout(function(){
+					$('.gallery_img:has(img[alt="Flutter"])').hide();
+					$('.gallery_img:has(img[alt="Firebase"])').hide();
+					$('.gallery_img:has(img[alt="Bootstrap"])').hide();
+					$('.gallery_img:has(img[alt="JQuery"])').hide();
+				},500,
+				setTimeout(function(){
+					$('.gallery_img:has(img[alt="Android"])').show().addClass('add_img');
+				},450)));
+			});
+
+			$(".Bootstrap_btn").click(function(){
+			  	setTimeout(function(){
+					$('.gallery_img:has(img[alt="Flutter"])').removeClass('add_img');
+					$('.gallery_img:has(img[alt="Firebase"])').removeClass('add_img');
+					$('.gallery_img:has(img[alt="Android"])').removeClass('add_img');
+					$('.gallery_img:has(img[alt="Bootstrap"])').removeClass('add_img');
+					$('.gallery_img:has(img[alt="JQuery"])').removeClass('add_img');
+				},0,
+				setTimeout(function(){
+					$('.gallery_img:has(img[alt="Flutter"])').hide();
+					$('.gallery_img:has(img[alt="Firebase"])').hide();
+					$('.gallery_img:has(img[alt="Android"])').hide();
+					$('.gallery_img:has(img[alt="JQuery"])').hide();
+				},500,
+				setTimeout(function(){
+					$('.gallery_img:has(img[alt="Bootstrap"])').show().addClass('add_img');
+				},450)));
+			});
+
+			$(".JQuery_btn").click(function(){
+			  	setTimeout(function(){
+					$('.gallery_img:has(img[alt="Flutter"])').removeClass('add_img');
+					$('.gallery_img:has(img[alt="Firebase"])').removeClass('add_img');
+					$('.gallery_img:has(img[alt="Android"])').removeClass('add_img');
+					$('.gallery_img:has(img[alt="Bootstrap"])').removeClass('add_img');
+					$('.gallery_img:has(img[alt="JQuery"])').removeClass('add_img');
+				},0,
+				setTimeout(function(){
+					$('.gallery_img:has(img[alt="Flutter"])').hide();
+					$('.gallery_img:has(img[alt="Firebase"])').hide();
+					$('.gallery_img:has(img[alt="Android"])').hide();
+					$('.gallery_img:has(img[alt="Bootstrap"])').hide();
+				},500,
+				setTimeout(function(){
+					$('.gallery_img:has(img[alt="JQuery"])').show().addClass('add_img');
+				},450)));
+			});
+
+			var $lightbox = $('#lightbox');
+			$('[data-target="#lightbox"]').on('click', function(event) {
+			  var $img = $(this).find('img'),
+			    src = $img.attr('src'),
+			    alt = $img.attr('alt'),
+			    css = {
+			      'maxWidth': $(window).width() - 200,
+			      'maxHeight': $(window).height() - 150
+			    };
+			  $lightbox.find('img').attr('src', src);
+			  $lightbox.find('img').attr('alt', alt);
+			  $lightbox.find('img').css(css);
+			});
+			$lightbox.on('shown.bs.modal', function(e) {
+			  var $img = $lightbox.find('img');
+			  $lightbox.find('.modal-dialog').css({
+			    'width': $img.width()
+			  });
+			  $lightbox.find('.close').removeClass('hidden');
+			});
+			// =================================================================================================  CONTACT FORM 
+			// ------------------------------------ BUTTON ANIMATION
+			function btn_animation() {
+				$(".btn").addClass("onclic");
+				setTimeout(() => {
+					$(".btn").removeClass("onclic").addClass("validate");
+				},2000,removeValidate());
+			}
+			function removeValidate() {
+				setTimeout(() => {
+					$(".btn").removeClass("validate");
+				},3800,dull_InputText());
+			}
+			function dull_InputText() {
+				setTimeout(() => {
+					$("input").val('');
+					$("textarea").val('');
+				},2000);
+			}
+
+			// ------------------------------------ FOR INPUT FIELDS
+			$(".inputBox").on({
+				mouseover: function(){
+			  		var $current_input = $(this).find("input");
+			  		var $current_label = $(this).find("span");
+			  		$current_input.css("border-bottom-color", "#45A29E");
+			  		$current_label.addClass("label_move_up_highlight").css("color","#45A29E");
+			  		$current_input.prop('disabled', false); //makes it enabled
+			  	},
+			  	mouseleave: function(){
+			  		var $current_input = $(this).find("input");
+			  		var $current_label = $(this).find("span");
+			  		
+
+			  		if($current_input.val() == ""){
+			  			$current_input.css("border-bottom-color", "gray");
+			  			$current_label.removeClass("label_move_up_highlight").css("color","gray");
+			  		}else{
+			  			$current_input.css("border-bottom-color", "#54C4C0");
+			  			$current_label.addClass("label_move_up_highlight").css("color","#54C4C0");
+			  		}
+			  	},
+			  	click: function(){
+			  		var $current_input = $(this).find("input");
+			  		var $current_label = $(this).find("span");
+			  		$current_input.css("border-bottom-color", "#54C4C0");
+			  		$current_label.addClass("label_move_up_highlight").css("color","#54C4C0");
+			  		$current_input.prop('disabled', false); //makes it enabled
+			  	},
+			  	input: function(){
+			  		var $current_input = $(this).find("input");
+			  		var $current_label = $(this).find("span");
+			  		$current_input.css("border-bottom-color", "#54C4C0");
+			  		$current_label.addClass("label_move_up_highlight").css("color","#54C4C0");
+			  		$current_input.prop('disabled', false); //makes it enabled
+			  	},
+			  	off: function(){
+			  		var $current_input = $(this).find("input");
+			  		var $current_label = $(this).find("span");
+			  		$current_input.prop('disabled', true); //makes it disabled
+
+			  		if($current_input.val() == ""){
+			  			$current_input.css("border-bottom-color", "gray");
+			  			$current_label.removeClass("label_move_up_highlight").css("color","gray");
+			  		}else{
+			  			$current_input.css("border-bottom-color", "#45A29E");
+			  			$current_label.addClass("label_move_up_highlight").css("color","#45A29E");
+			  		}
+			  	}
+			});
+
+			// ------------------------------------ FOR TEXTAREA FIELDS
+			$("#textarea_box").on({
+				mouseover: function(){
+			  		var $current_input = $(this).find("textarea");
+			  		var $current_label = $(this).find("span");
+			  		$current_input.css("border-bottom-color", "#45A29E");
+			  		$current_label.addClass("label_move_up_highlight").css("color","#45A29E");
+			  		$current_input.prop('disabled', false); //makes it enabled
+			  	},
+			  	mouseleave: function(){
+			  		var $current_input = $(this).find("textarea");
+			  		var $current_label = $(this).find("span");
+			  		$current_input.prop('disabled', true); //makes it disabled
+
+			  		if($current_input.val() == ""){
+			  			$current_input.css("border-bottom-color", "gray");
+			  			$current_label.removeClass("label_move_up_highlight").css("color","gray");
+			  		}else{
+			  			$current_input.css("border-bottom-color", "#54C4C0");
+			  			$current_label.addClass("label_move_up_highlight").css("color","#54C4C0");
+			  		}
+			  	},
+			  	input: function(){
+			  		var $current_input = $(this).find("input");
+			  		var $current_label = $(this).find("span");
+			  		$current_input.css("border-bottom-color", "#54C4C0");
+			  		$current_label.addClass("label_move_up_highlight").css("color","#54C4C0");
+			  		$current_input.prop('disabled', false); //makes it enabled
+			  	},
+			  	click: function(){
+			  		var $current_input = $(this).find("textarea");
+			  		var $current_label = $(this).find("span");
+			  		$current_input.css("border-bottom-color", "#54C4C0");
+			  		$current_label.addClass("label_move_up_highlight").css("color","#54C4C0");
+			  		$current_input.prop('disabled', false); //makes it enabled
+			  	},
+			  	off: function(){
+			  		var $current_input = $(this).find("textarea");
+			  		var $current_label = $(this).find("span");
+			  		$current_input.prop('disabled', true); //makes it disabled
+
+			  		if($current_input.val() == ""){
+			  			$current_input.css("border-bottom-color", "gray");
+			  			$current_label.removeClass("label_move_up_highlight").css("color","gray");
+			  		}else{
+			  			$current_input.css("border-bottom-color", "#45A29E");
+			  			$current_label.addClass("label_move_up_highlight").css("color","#45A29E");
+			  		}
+			  	}
+			});
+
+			// VALIDATING FORM INPUT
+			$('#contact_form').submit(function (e) {
+			    e.preventDefault();
+			    if (validate() == true) {
+			    	btn_animation();
+			    }
+			});
+
+			// ------------------------------------ FORM VALIDATION 
+			function validate(){
+				var isValid = true;
+				if($("#first_name").val() == ""){
+					$("#first_name_err").html("Please Enter First Name.");
+					isValid = false;
+				}else{
+					$("#first_name_err").html("");
+				}
+				if($("#last_name").val() == ""){
+					$("#last_name_err").html("Please Enter Last Name.");
+					isValid = false;
+				}else{
+					$("#last_name_err").html("");
+				}
+				if($("#email").val() == ""){
+					$("#email_err").html("Please Enter Your E-mail.");
+					isValid = false;
+				}else{
+					var email_format = /[0-9a-zA-Z](@)[a-zA-Z].*[.](com)$/;
+					if (!($("#email").val().match(email_format))) {
+						$("#email_err").html("Enter E-mail in Correct Format.");
+						isValid = false;
+					}else {
+						$("#email_err").html("");
+					}
+				}
+				if($("#phone_number").val() == ""){
+					$("#phone_number_err").html("Please Enter Your Phone Number.");
+					isValid = false;
+				}else{
+					$("#phone_number_err").html("");
+				}
+				if($("#message").val() == ""){
+					$("#message_err").html("Enter Your Message.");
+					isValid = false;
+				}else{
+					$("#message_err").html("");
+				}
+				return isValid;
+			}
+
+			// ================================================================================================= SKILLS
+
+			$("#owl-example").owlCarousel({
+			    itemsDesktop : [1499,4],
+			    itemsDesktopSmall : [1199,3],
+			    itemsTablet : [899,2],
+			    itemsMobile : [599,1]
+			});
+
+			$(function() {
+			    $('.chart').easyPieChart({
+			        size: 180,
+			        barColor: "#45A29E",
+			        scaleLength: 0,
+			        lineWidth: 15,
+			        trackColor: "transparent",
+			        lineCap: "circle",
+			        animate: 2000,
+			    });
+			});
+		});
+	</script>
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+
+	<!-- ------------------------------------------------------------------------------- HOME SECTION -->
+	<div id="section_Home" class="container-fluid">
+		<div class="home_container">
+			<div class="bg"></div>
+			<div class="bg bg2"></div>
+			<div class="bg bg3"></div>
+			<div class="col-md-8 col-sm-10 col-xs-12 content">
+			  	<h1 style="padding:0 20vmin;" class="col-xs-12">Hello, I'm <span style="color: var(--text_highlight)">Rouzaz Aamir Hashmi</span></h1>
+			  	<h1 style="padding-left: 1vmin;" class="col-xs-12">I am a Full Stack Flutter Developer</h1>
+			  	<a class="scroll_down_box" href="#section_About">
+			  		<div class="scrolldown">
+			  			<span></span>
+			  			<span></span>
+			  			<span></span>
+			  		</div>
+			  	</a>
+			</div>
+		</div>
+	</div>
+
+	<nav class="col-xs-12 navbar navbar-inverse" style="margin: 0;">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>                        
+				</button>
+			</div>
+			<div class="collapse navbar-collapse" id="myNavbar">
+				<ul class="nav navbar-nav">
+					<li><a href="#section_Home">Home</a></li>
+					<li><a href="#section_About">About</a></li>
+					<li><a href="#section_Skills">Skills</a></li>
+					<li><a href="#section_Portfolio">Portfolio</a></li>
+					<li><a href="#section_Contact">Contact</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>    
+
+	<!-- ------------------------------------------------------------------------------- ABOUT SECTION -->
+	<div id="section_About" class="container-fluid">
+		<!-- TITLE -->
+		<div class="col-xs-12 section_title">
+			<span style="color: var(--text_highlight);">&mdash;</span>
+			About
+			<span style="color: var(--text_highlight);">&mdash;</span>
+		</div>
+		<!-- WHY CHOOSE ME -->
+		<div class="why_choose_me">
+			<div class="card" onclick="void(0)">
+				<div class="face face1">
+					<div class="content">
+						<div class="icons"><i class="far fa-laugh-beam"></i></div>
+						<h3>Customer Satisfaction</h3>
+					</div>
+				</div>
+				<div class="face face2">
+					<div class="content">
+						<p>I belive in positive interaction and communication with the customer to bring their creative idea alive.</p>
+					</div>
+				</div>
+			</div>
+			<div class="card" onclick="void(0)">
+				<div class="face face1">
+					<div class="content">
+						<div class="icons"><i class="fas fa-shield-alt"></i></div>
+						<h3>Advance App Security</h3>
+					</div>
+				</div>
+				<div class="face face2">
+					<div class="content">
+						<p>The need for security is the number one priority when designing your app. </p>
+					</div>
+				</div>
+			</div>
+			<div class="card" onclick="void(0)">
+				<div class="face face1">
+					<div class="content">
+						<div class="icons"><i class="fas fa-briefcase"></i></div>
+						<h3>30 Days Free Service</h3>
+					</div>
+				</div>
+				<div class="face face2">
+					<div class="content">
+						<p>The customer is provided with 30 days service for free, after the delivery of app.</p>
+					</div>
+				</div>
+			</div>
+			<div class="card" onclick="void(0)">
+				<div class="face face1">
+					<div class="content">
+						<div class="icons"><i class="fas fa-cogs"></i></div>
+						<h3>High Quality Work</h3>
+					</div>
+				</div>
+				<div class="face face2">
+					<div class="content">
+						<p>The goal is not just to make an app but to bring high performance and efficency to create a dynamic app.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- ABOUT ME -->
+		<div class="col-xs-12 about_me">
+			<!-- IMAGE -->
+			<div class="img_box">
+				<div class="img">
+					<img style="box-shadow: 5px 5px 15px rgba(0,0,0,.1);" class="img-responsive your_image" src="images/you1.jpeg">
+					<div class="img-responsive square"></div>
+					<img style="box-shadow: 5px 5px 15px rgba(0,0,0,.05);" class="img-responsive bg_img" src="images/img_bg2.jpg">
+				</div>
+			</div>
+
+			<!-- TEXT -->
+			<div class="info_box">
+				<div class="title">
+					Who am 
+					<span style="color: var(--div_highlight)"> I </span> 
+					?
+				</div>
+				<div class="text_body">
+					<p>
+						Hi!. I am an App Developer with speciality in developing IOS and native Android apps using flutter. I have an experience of more than 1+ years during which I focused on refining and enhancing my skills. I build the applications according to Google's Guidelines to ensure product quality, hence your app will never get banned !
+					</p>
+					<p>
+						Whether it is wanting any 
+						<span style="color: var(--div_highlight)"> extra feature </span>  
+						in your existing app or developing an application
+						<span style="color: var(--div_highlight)"> from scratch </span>
+						, all services will be provided on time !.
+					</p>
+				</div>
+				<div class="name">
+					<span style="color: var(--div_highlight)">&mdash; Rouzaz Aamir Hashmi</span>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- ------------------------------------------------------------------------------- PORTFOLIO SECTION -->
+	<div id="section_Skills" class="container-fluid">
+		<!-- TITLE -->
+		<div class="col-xs-12 section_title">
+			<span style="color: var(--text_highlight);">&mdash;</span>
+			<span style="color: black;"> Skills </span>
+			<span style="color: var(--text_highlight);">&mdash;</span>
+		</div>
+		<div class="container-fluid">
+		    <div class="row">
+		        <div id="owl-example" class="owl-carousel">
+		            <div class="box">
+		                <div class="chart" data-percent="80">80%</div>
+		                <h4>Firebase</h4>
+		            </div>
+		            <div class="box">
+		                <div class="chart" data-percent="90">90%</div>
+		                <h4>Flutter</h4>
+		            </div>
+		            <div class="box">
+		                <div class="chart" data-percent="70">70%</div>
+		                <h4>Electron JS</h4>
+		            </div>
+		            <div class="box">
+		                <div class="chart" data-percent="95">95%</div>
+		                <h4>jQuery</h4>
+		            </div>
+		            <div class="box">
+		                <div class="chart" data-percent="97">97%</div>
+		                <h4>Bootstrap</h4>
+		            </div>
+		            <div class="box">
+		                <div class="chart" data-percent="80">80%</div>
+		                <h4>UX</h4>
+		            </div>
+		            <div class="box">
+		                <div class="chart" data-percent="89">89%</div>
+		                <h4>UI</h4>
+		            </div>
+		            <div class="box">
+		                <div class="chart" data-percent="78">78%</div>
+		                <h4>Animations</h4>
+		            </div>
+		            <div class="box">
+		                <div class="chart" data-percent="95">95%</div>
+		                <h4>Photoshop</h4>
+		            </div>
+		        </div>
+		    </div>
+		</div>
+	</div>
+
+	<!-- ------------------------------------------------------------------------------- PORTFOLIO SECTION -->
+	<div id="section_Portfolio" class="container-fluid">
+		<!-- TITLE -->
+		<div class="col-xs-12 section_title">
+			<span style="color: var(--text_highlight);">&mdash;</span>
+			Portfolio
+			<span style="color: var(--text_highlight);">&mdash;</span>
+		</div>
+		<!-- GALLERY -->
+		<div class="gallery">
+			<div class="gallery_buttons grid-container">
+				<button class="all_btn">all</button>
+				<button class="Flutter_btn">Flutter</button>
+				<button class="Firebase_btn">Firebase</button>
+				<button class="Android_btn">Android</button>
+				<button class="Bootstrap_btn">Bootstrap</button>
+				<button class="JQuery_btn">JQuery</button>
+			</div>
+			<div class="gallery_box">
+				<a target="_blank" href="https://play.google.com/store/apps/details?id=com.blood.bloodgroup">
+					<div class="gallery_img">
+						<img src="images/and.PNG" alt="Android">
+					</div>
+				</a>
+				<a target="_blank" href="https://play.google.com/store/apps/details?id=tech.assort.hilbro_international ">
+					<div class="gallery_img">
+						<img src="images/flutter1.PNG" alt="Flutter">
+					</div>
+				</a>
+				<a href="#" class="zoom" data-toggle="modal" data-target="#lightbox">
+					<div class="gallery_img">
+						<img src="images/bs4.png" alt="Bootstrap">
+					</div>
+				</a>
+				<a href="#" class="zoom" data-toggle="modal" data-target="#lightbox">
+					<div class="gallery_img">
+						<img src="images/jq1.jpg" alt="JQuery">
+					</div>
+				</a>
+				<a href="#" class="zoom" data-toggle="modal" data-target="#lightbox">
+					<div class="gallery_img">
+						<img src="images/bs1.png" alt="Bootstrap">
+					</div>
+				</a>
+				<a href="#" class="zoom" data-toggle="modal" data-target="#lightbox">
+					<div class="gallery_img">
+						<img src="images/bs3.png" alt="Bootstrap">
+					</div>
+				</a>
+				<a href="#" class="zoom" data-toggle="modal" data-target="#lightbox">	
+					<div class="gallery_img">
+						<img src="images/bs2.png" alt="Bootstrap">
+					</div>
+				</a>
+				<a href="#" class="zoom" data-toggle="modal" data-target="#lightbox">
+					<div class="gallery_img">
+						<img src="images/jq2.png" alt="JQuery">
+					</div>
+				</a>
+				<a href="#" class="zoom" data-toggle="modal" data-target="#lightbox">
+					<div class="gallery_img">
+						<img src="images/bs5.png" alt="Bootstrap">
+					</div>
+				</a>	
+				<a target="_blank" href="https://apkpure.com/couplics-your-digital-ring/com.couplics">
+					<div class="gallery_img">
+						<img src="images/flutter2.png" alt="Flutter">
+					</div>
+				</a>
+				<a href="#" class="zoom" data-toggle="modal" data-target="#lightbox">
+					<div class="gallery_img">
+						<img src="images/jq3.jpg" alt="JQuery">
+					</div>
+				</a>
+				<a target="_blank" href="https://apps.apple.com/us/app/san-martino-la-fiera-in-tasca/id1486644651">
+					<div class="gallery_img">
+						<img src="images/flutter3.png" alt="Flutter">
+					</div>
+				</a>
+			</div>
+			<div id="lightbox" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+			    <div class="modal-dialog">
+			      <div class="modal-content">
+			        <div class="modal-header">
+			          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+			         
+			        </div>
+			        <div class="modal-body">
+			          <img src="" alt="" />
+			        </div>
+			      </div>
+			    </div>
+			  </div>
+		</div>
+	</div>
+
+	<!-- ------------------------------------------------------------------------------- CONTACT SECTION -->
+	<div id="section_Contact" class="container-fluid">
+		<div class="col-xs-12 section_title">
+			<span style="color: var(--text_highlight);">&mdash;</span>
+			Contact
+			<span style="color: var(--text_highlight);">&mdash;</span>
+		</div>
+		<div class="container">
+			<form id="contact_form">
+				<div class="inputBox">
+					<input autocomplete="off" type="text" id="first_name" name="first_name">
+					<span>First name</span>
+					<div style="color: red; font-size: 12px;margin-top: 10px;font-weight: bolder;" id="first_name_err"></div>
+				</div>
+				<div class="inputBox">
+					<input autocomplete="off" type="text" id="last_name" name="last_name">
+					<span>Last name</span>
+					<div style="color: red; font-size: 12px;margin-top: 10px;font-weight: bolder;" id="last_name_err"></div>
+				</div>
+				<div class="inputBox">
+					<input autocomplete="off" type="number" id="phone_number" name="phone_number">
+					<span>Phone Number</span>
+					<div style="color: red; font-size: 12px;margin-top: 10px;font-weight: bolder;" id="phone_number_err"></div>
+				</div>
+				<div class="inputBox">
+					<input autocomplete="off" type="email" id="email" name="email">
+					<span>E-mail Address</span>
+					<div style="color: red; font-size: 12px;margin-top: 10px;font-weight: bolder;" id="email_err"></div>
+				</div>
+				<div id="textarea_box">
+					<textarea autocomplete="off" id="message" name="message"></textarea>
+					<span>Message</span>
+					<div style="color: red; font-size: 12px;margin-top: 10px;font-weight: bolder;" id="message_err"></div>
+				</div>
+				<div class="inputBox">
+					<button id="submit_btn" name="submit_btn" class="btn" type="submit" form="contact_form"></button>
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<!-- ------------------------------------------------------------------------------- FOOTER SECTION -->
+	<div id="Section_Footer" class="col-xs-12">
+		<!-- Sentence -->
+		<div class="col-xs-12" id="subSection_Sentence">Bringing Your Vision to Life</div>
+		<!-- Info -->
+		<div class="col-xs-12" id="subSection_Info">
+			<div class="footer_box">
+				<div class="footer_title">About Us</div>
+				<div class="footer_body">Hi!. I am an App Developer with speciality in developing IOS and native Android apps using flutter. I have an experience of more than 1+ years during which I focused on refining and enhancing my skills. I build the applications according to Google's Guidelines to ensure product quality, hence your app will never get banned !O</div>
+			</div>
+			<div class="footer_box">
+				<div class="footer_title">Features</div> 
+				<div class="footer_body">
+					<li><a href="#Section_Services">Services</a></li>
+					<li><a href="#Section_Portfolio">Portfolio</a></li>
+					<li><a href="#Section_Pricing">Pricing</a></li>
+					<li><a href="#Section_Contact">Contact</a></li>
+				</div>
+			</div>
+			<div class="footer_box">
+				<div class="footer_title">Contact Us</div>
+				<div class="footer_body">
+					<li><i class="fas fa-envelope"></i> rozazhashmi406@gmail.com</li>
+					<li><i class="fas fa-map-marker-alt"></i>Lahore, Pakistan</li>
+				</div>
+			</div>
+			<div class="footer_box">
+				<div class="footer_title">Follow Us</div>
+				<div class="footer_body">
+					<div class="socials">
+						<a target="_block" href="https://www.linkedin.com/in/rozaz-hashmi-1906a6162/ "><i class="fab fa-linkedin-in"></i></a>
+						<a target="_block" href="https://www.facebook.com/profile.php?id=100010281305631"><i class="fab fa-facebook-f"></i></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Copyright -->
+		<div class="col-xs-12" id="subSection_Copyright">
+			Copyright 
+			<span style="color: var(--text_highlight);font-weight: lighter;font-size: 15px">
+				<i class="far fa-copyright"></i>
+			</span> 
+			Rouzaz Aamir Hashmi 2020
+			<div>
+				<a style="color:lightgray;font-size: 13px;text-decoration: none;" href="http://www.freepik.com">Background Image vector Designed by rawpixel.com / Freepik</a>
+			</div>
+		</div>
+	</div>
+
+	<!-- jQuery Code -->
+	<script src="basic.js"></script>
+</body>
+</html>
